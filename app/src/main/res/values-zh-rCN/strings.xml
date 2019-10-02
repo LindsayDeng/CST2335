@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lab1</string>
-    <string name="hello_message">你好!</string>
-    <string name="ButtonText">I\’m a button</string>
+
+    <string name="app_name">AndroidLab2</string>
+    <string name="textChar">看我的GUI!</string>
+    <string name="buttonChar">点这里</string>
+    <string name="checkChar">看看这个!</string>
+    <string name="switchChar">开关 开/关</string>
+    <string name="editChar">在这里打字</string>
 </resources>
