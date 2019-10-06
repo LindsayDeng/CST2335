@@ -7,4 +7,22 @@
     <string name="checkChar">看看这个!</string>
     <string name="switchChar">开关 开/关</string>
     <string name="editChar">在这里打字</string>
+
+    <string name="name1">输入地址</string>
+    <string name="name2">输入邮箱地址</string>
+    <string name="name3">输入密码</string>
+    <string name="name4">登录</string>
+
+    <string name="name5">你的档案</string>
+    <string name="name6">你的名字</string>
+    <string name="name7">输入你的名字</string>
+    <string name="name8">你的邮箱</string>
+    <string name="name9">输入你的邮箱</string>
+    <string name="name10">你的图片</string>
+    <string name="name11">点击拍照</string>
+
+
+
+
+
 </resources>

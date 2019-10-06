@@ -40,20 +40,23 @@ public class ProfileActivity extends AppCompatActivity {
         ImageButton mButton = findViewById(R.id.buttonpicture);
         mButton.setOnClickListener(v -> {
 
-                    Intent takePictureIntent = new Intent(ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+//                    Intent takePictureIntent = new Intent(ACTION_IMAGE_CAPTURE);
+//                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+            dispatchTakePictureIntent();
         });
 
         Log.e(ACTIVITY_NAME, "In function onCreate");
     }
 
-//    private void dispatchTakePictureIntent() {
-//        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-//            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-//
-//        }
-//    }
+    private void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+
+        }
+        Log.e(ACTIVITY_NAME, "In function dispatchTakePictureIntent");
+
+    }
 
     protected void onStart(){
         super.onStart();
@@ -95,6 +98,8 @@ public class ProfileActivity extends AppCompatActivity {
             mImageButton.setImageBitmap(photo);
 
         }
+
+        Log.e(ACTIVITY_NAME, "In function onActivityResult");
     }
 
 }

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_row="0"
         android:layout_column="0"
-        android:text="Your profile"
+        android:text="@string/name5"
 
         />
     <TextView
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_row="1"
         android:layout_column="0"
-        android:text="Your Name"
+        android:text="@string/name6"
 
         />
 
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_row="2"
         android:layout_column="0"
-        android:hint="Enter your name"
+        android:hint="@string/name7"
         android:inputType="textPersonName"/>
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_row="3"
         android:layout_column="0"
-        android:text="Your Email"
+        android:text="@string/name8"
 
         />
     <EditText
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_row="4"
         android:layout_column="0"
-        android:hint="Enter your email"
+        android:hint="@string/name9"
         android:inputType="textEmailAddress"/>
 
     <TextView
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_row="5"
         android:layout_column="0"
-        android:text="Your Picture"
+        android:text="@string/name10"
 
         />
 
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_row="7"
         android:layout_column="0"
-        android:text="Click the button to take a picture"
+        android:text="@string/name11"
 
         />
 </GridLayout>

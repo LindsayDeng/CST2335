@@ -6,4 +6,19 @@
     <string name="checkChar">Check this out!</string>
     <string name="switchChar">Switch on/off</string>
     <string name="editChar">Type here</string>
+
+    <string name="name1">Enter your email address</string>
+    <string name="name2">Type email here</string>
+    <string name="name3">Type your password</string>
+    <string name="name4">LOGIN</string>
+
+    <string name="name5">Your profile</string>
+    <string name="name6">Your name</string>
+    <string name="name7">Enter your name</string>
+    <string name="name8">Your Email</string>
+    <string name="name9">Enter your email</string>
+    <string name="name10">Your picture</string>
+    <string name="name11">Click the button to take a picture</string>
+
+
 </resources>
