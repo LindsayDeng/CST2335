@@ -14,15 +14,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import static android.provider.MediaStore.ACTION_IMAGE_CAPTURE;
+
 
 public class ProfileActivity extends AppCompatActivity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
     protected ImageView mImageButton;
-
-
+    protected EditText editText;
 
     protected void onCreate(Bundle savedInstanceState) {
 //        Log.e(ACTIVITY_NAME, "In function: onCreate");
@@ -39,11 +38,19 @@ public class ProfileActivity extends AppCompatActivity {
         this.mImageButton = this.findViewById(R.id.buttonpicture);
         ImageButton mButton = findViewById(R.id.buttonpicture);
         mButton.setOnClickListener(v -> {
-
-//                    Intent takePictureIntent = new Intent(ACTION_IMAGE_CAPTURE);
-//                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
             dispatchTakePictureIntent();
         });
+
+        Button page2Button = findViewById(R.id.gotochatroom);
+        if(page2Button != null)
+            page2Button.setOnClickListener(v -> {
+                Intent goToPage3 = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+                startActivity(goToPage3);
+
+            });
+
+
+
 
         Log.e(ACTIVITY_NAME, "In function onCreate");
     }
