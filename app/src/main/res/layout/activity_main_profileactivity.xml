@@ -90,6 +90,6 @@
         android:layout_column="0"
         android:gravity="fill"
         android:textAlignment="center"
-        android:text="Go to Chat" />
+        android:text="@string/text1" />
 
 </GridLayout>

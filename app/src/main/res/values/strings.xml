@@ -20,5 +20,9 @@
     <string name="name10">Your picture</string>
     <string name="name11">Click the button to take a picture</string>
 
+    <string name="text1">Go to Chat</string>
+    <string name="text2">Send</string>
+    <string name="text3">Receive</string>
+
 
 </resources>

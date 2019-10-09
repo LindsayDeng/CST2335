@@ -15,9 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChatRoomActivity extends AppCompatActivity {
-//    ListView myList;
-//    EditText message;
-//    Button  send, receive;
+
     ArrayList<Message> messageLog = new ArrayList();
     BaseAdapter messageAdapter;
 
@@ -29,18 +27,6 @@ public class ChatRoomActivity extends AppCompatActivity {
         ListView theList = findViewById(R.id.theList);
         theList.setAdapter(messageAdapter= new MyListAdapter());
 
-
-//        myList = findViewById(R.id.theList);
-//        message = findViewById(R.id.textMessage);
-//        send = findViewById(R.id.sendButton);
-//        receive = findViewById(R.id.receiveButton);
-//        messageList = new ArrayList<>();
-
-//        ListAdapter aListAdapter = new ListAdapter(messageList, getApplicationContext());
-//        myList.setAdapter( aListAdapter);
-
-//        myList.setAdapter(mAdapter = new ListAdapter());
-
         Button sendButton = findViewById(R.id.sendButton);
         sendButton.setOnClickListener(click -> {
             EditText edit = findViewById(R.id.textMessage);
@@ -49,11 +35,6 @@ public class ChatRoomActivity extends AppCompatActivity {
             messageAdapter.notifyDataSetChanged();
             edit.getText().clear();
 
-//            String stringMessage = message.getText().toString();
-//            Message msg = new Message(stringMessage, true);
-//            messageList.add(msg);
-//            //message.setText("");
-//            mAdapter.notifyDataSetChanged();
         });
 
         Button receiveButton = findViewById(R.id.receiveButton);
@@ -64,18 +45,11 @@ public class ChatRoomActivity extends AppCompatActivity {
             messageAdapter.notifyDataSetChanged();
             edit.getText().clear();
 
-//            String stringMessage = message.getText().toString();
-//            Message msg = new Message(stringMessage, true);
-//            messageList.add(msg);
-//            //message.setText("");
-//            mAdapter.notifyDataSetChanged();
         });
 
     }
 
     private class MyListAdapter extends BaseAdapter {
-
-
 
         @Override
         public int getCount() {

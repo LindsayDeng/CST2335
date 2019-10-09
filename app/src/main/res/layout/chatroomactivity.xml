@@ -18,7 +18,7 @@
         android:id="@+id/sendButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send"
+        android:text="@string/text2"
         android:layout_alignParentBottom="true"
 
         />
@@ -35,7 +35,7 @@
         android:id="@+id/receiveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Receive"
+        android:text="@string/text3"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
 
