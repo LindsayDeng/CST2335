@@ -46,10 +46,7 @@ public class ProfileActivity extends AppCompatActivity {
             page2Button.setOnClickListener(v -> {
                 Intent goToPage3 = new Intent(ProfileActivity.this, ChatRoomActivity.class);
                 startActivity(goToPage3);
-
             });
-
-
 
 
         Log.e(ACTIVITY_NAME, "In function onCreate");
@@ -98,14 +95,10 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
 
-//            Bundle extras = data.getExtras();
-//            Bitmap imageBitmap = (Bitmap) extras.get("data");
-
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             mImageButton.setImageBitmap(photo);
 
         }
-
         Log.e(ACTIVITY_NAME, "In function onActivityResult");
     }
 
