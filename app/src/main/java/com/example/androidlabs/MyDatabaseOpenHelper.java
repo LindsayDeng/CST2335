@@ -3,10 +3,11 @@ package com.example.androidlabs;
 import android.app.Activity;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class MyDatabaseOpenHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "MyDatabaseFile";
-    public static final int VERSION_NUM = 1;
+    public static final int VERSION_NUM = 4;
     public static final String TABLE_NAME = "ChatHistory";
     public static final String COL_ID = "_id";
     public static final String COL_MESSAGE = "MESSAGE";
@@ -27,6 +28,12 @@ public class MyDatabaseOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        Log.i("Database upgrade", "Old version:" + oldVersion + " newVersion:"+newVersion);
 
+        //Delete the old table:
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+
+        //Create a new table:
+        onCreate(db);
     }
 }

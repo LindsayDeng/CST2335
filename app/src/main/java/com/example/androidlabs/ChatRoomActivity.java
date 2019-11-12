@@ -2,6 +2,7 @@ package com.example.androidlabs;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
@@ -62,12 +63,10 @@ public class ChatRoomActivity extends AppCompatActivity {
             String message = edit.getText().toString();
 
             ContentValues newRowValues = new ContentValues();
-            //put string name in the NAME column:
             newRowValues.put(MyDatabaseOpenHelper.COL_MESSAGE, message);
-            //put string email in the EMAIL column:
             newRowValues.put(MyDatabaseOpenHelper.COL_SENT, 1);
-
             long newId = db.insert(MyDatabaseOpenHelper.TABLE_NAME, null, newRowValues);
+
             printCursor(results);
             messageLog.add(new Message(message, true, newId));
             messageAdapter.notifyDataSetChanged();
@@ -98,12 +97,12 @@ public class ChatRoomActivity extends AppCompatActivity {
 
 
     private void printCursor( Cursor c){
-        Log.e("Database version number", "" + MyDatabaseOpenHelper.VERSION_NUM);
-        Log.e("Cursor column number", "" + c.getColumnCount());
-        Log.e("Cursor column name", "" + c.getColumnName(0) + ", " + c.getColumnName(1)
+        Log.i("Database version number", "" + MyDatabaseOpenHelper.VERSION_NUM);
+        Log.i("Cursor column number", "" + c.getColumnCount());
+        Log.i("Cursor column name", "" + c.getColumnName(0) + ", " + c.getColumnName(1)
                 + ", " + c.getColumnName(2));
-        Log.e("Cursor result numer", "" + c.getCount());
-        Log.e("Each row of results", ""
+        Log.i("Cursor result numer", "" + c.getCount());
+        Log.i("Each row of results", "" + DatabaseUtils.dumpCursorToString(c)
         );
 
     }
