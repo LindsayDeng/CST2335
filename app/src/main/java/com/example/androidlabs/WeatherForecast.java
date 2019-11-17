@@ -107,7 +107,7 @@ public class WeatherForecast extends AppCompatActivity {
                                 Bitmap image = null;
                                 String urlString = "http://openweathermap.org/img/w/" + iconName + ".png";
 
-                                if (fileExistance(iconName + ".png" ) ){
+                                if (!fileExistance(iconName + ".png" ) ){
                                     URL imageURL = new URL(urlString);
                                     HttpURLConnection connection = (HttpURLConnection) imageURL.openConnection();
                                     connection.connect();
@@ -122,7 +122,7 @@ public class WeatherForecast extends AppCompatActivity {
                                         outputStream.close();
                                         pic = image;
                                     }
-
+                                    Log.i("image", "the image is not found locally, downloading");
                                 } else {
                                     FileInputStream fis = null;
                                     try {fis = openFileInput(iconName + ".png");   }
