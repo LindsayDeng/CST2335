@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+
+
+    <ListView
+        android:id="@+id/theList"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above = "@+id/sendButton"
+        android:transcriptMode = "alwaysScroll"
+        />
+
+    <FrameLayout
+        android:id = "@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_dark_background"
+        android:layout_toEndOf="@id/theList"
+        />
+
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text2"
+        android:layout_alignParentBottom="true"
+
+        />
+    <EditText
+        android:id="@+id/textMessage"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/editChar"
+        android:inputType="textPersonName"/>
+
+    <Button
+        android:id="@+id/receiveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text3"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/frame"
+        />
+
+</RelativeLayout>
