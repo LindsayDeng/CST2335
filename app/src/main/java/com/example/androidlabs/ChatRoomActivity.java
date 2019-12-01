@@ -79,8 +79,8 @@ public class ChatRoomActivity extends AppCompatActivity {
                 dFragment.setTablet(true);  //tell the fragment if it's running on a tablet or not
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .add(R.id.frame, dFragment) //Add the fragment in FrameLayout
-                        .addToBackStack("AnyName") //make the back button undo the transaction
+                        .replace(R.id.frame, dFragment) //Add the fragment in FrameLayout
+                        //.addToBackStack("AnyName") //make the back button undo the transaction
                         .commit(); //actually load the fragment.
             }
             else //isPhone
